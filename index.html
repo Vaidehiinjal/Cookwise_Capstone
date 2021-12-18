@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookwise</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+        <nav id="nav">
+         <ul class="left-ul">
+             <li><a href="">Cookwise</a></li>
+         </ul>
+         <div class="empty"></div>
+         <form action="login.php" method="post">
+            <ul class="right-ul">
+                <li>
+                    <input type="email" class="nav-control" name="phoneoremail" placeholder="Enter email...">
+                </li>
+                <li>
+                   <input type="password" class="nav-control" name="password" placeholder="Enter password...">
+               </li>
+               <li>
+                   <input type="submit" class="nav-btn" value="Login">
+               </li>
+               
+            </ul>
+         </form>
+        <input type="submit" class="nav-btn-fp" onclick="forgetpassword()" value="Forget Password">
+        </nav>
+      <!-- Close nav -->
+    <div class="container">
+        <div class="left-section">
+         <div class="left-heading">
+             <h3>Cookwise helps you cook different foods in differnet ways.</h3>
+             <div class="image">
+                 <img src="./Assets/dummies.jpg" alt="" width="500" height="400">
+             </div>
+         </div>
+        </div>
+        <div class="right-section">
+          <h1 class="form-heading">
+            Create an account
+          </h1>
+          <p class="text">This app is free for ever user.</p>
+          <form action="signup.php" method="post" id="formSection" >
+              <div class="form-group">
+                  <input type="text" class="control half" name="firstname" placeholder="First Name"> </div>
+               <div class="form-group">
+                      <input type="text" class="control half" name="lastname" placeholder="Last Name"></div>
+              <div class="form-group">
+                  <input type="text" class="control" name="phoneoremail" placeholder="Mobile number or Email">
+              </div>
+              <div class="form-group">
+                  <input type="password" class="control" name="password" placeholder="New Password">
+              </div>
+                <div class="form-group">
+        <p class="age">Age</p>
+                        <select id="">
+                         <option value="">12</option>
+                         <option value="">13</option>
+                         <option value="">14</option>
+                         <option value="">15</option>
+                         <option value="">16</option>
+                         <option value="">17</option>
+                         <option value="">18</option>
+                         <option value="">19</option>
+                         <option value="">20</option>
+                         <option value="">21</option>
+                         <option value="">22</option>
+                         <option value="">23</option>
+                         <option value="">24</option>
+                     </select>
+                     </div> <div class="form-group">
+                    <p class="Dishes">Food Type</p>
+                     <select id="">
+                        <option value="">Italian Food</option>
+                        <option value="">Mexican Food</option>
+                        <option value="">Indian Food</option>
+                        <option value="">Chinese Food</option>
+                        <option value="">Sea Food</option>
+                     </select>
+                 </div>
+                 <div class="form-group">
+                     <input type="radio"  id="female"> <b>Female</b>
+                     <input type="radio" id="male"> <b>Male</b>
+                 </div>
+                 <div class="form-group">
+                     <button class="btn" type="submit">Sign Up</button>
+                 </div>
+                 
+             </form>
+           </div>
+       </div>
+
+       
+       <div id="popupContact">
+        <button id="close" onclick="closeDiv()">
+        <img src="./assets/close-button.svg" id="close">
+    </button>
+    <form action="./update.php" method="post">
+        <div id="card">
+            <input type="text" id="email" name="phoneoremail" placeholder="Mobile number or Email">
+            <input type="password" id="password" name="password" placeholder="Enter the new Pasword">
+            <button id="update" type="submit">
+                Update Data
+            </button>
+        </div>
+    </form>
+    </div>
+
+    <script>
+        function forgetpassword(){
+            document.getElementById('popupContact').style.display = "block";
+    }
+        function closeDiv(){
+            document.getElementById('popupContact').style.display = "none"
+    }
+    </script>
+
+</body>
+</html>
